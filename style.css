@@ -1,0 +1,122 @@
+/* --- Global Reset & Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+:root {
+    --primary-red: #ff2d55;
+    --dark-bg: #111111;
+    --text-light: #ffffff;
+    --text-gray: #a5a5a5;
+    --font-main: 'Poppins', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-main);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: #fff;
+    padding: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.top-bar {
+    background: var(--primary-red);
+    padding: 12px 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('your-hero-image.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: var(--text-light);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background: var(--primary-red);
+    color: white;
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* --- Product Sections --- */
+.section-title {
+    text-align: center;
+    padding: 80px 0 40px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.section-title p {
+    color: #888;
+    font-style: italic;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* Add a hamburger menu for mobile later */
+}
